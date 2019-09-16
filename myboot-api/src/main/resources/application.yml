@@ -1,0 +1,17 @@
+server:
+  port: 80
+  servlet:
+    context-path: /myself
+  tomcat:
+    uri-encoding: utf-8
+
+
+spring:
+  profiles:
+    active: jdbc
+logging:
+  config: classpath:logback-config.xml
+
+#清除CONDITIONS EVALUATION REPORT日志信息
+logging.level.org.springframework.boot.autoconfigure: ERROR
+

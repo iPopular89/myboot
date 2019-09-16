@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuxing.mapper.SysPermissionRoleMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.liuxing.entity.SysPermissionRole">
+        <id column="permission_id" property="permissionId" />
+        <result column="role_id" property="roleId" />
+    </resultMap>
+
+    <select id="getRoleId" parameterType="string" resultType="com.liuxing.entity.SysPermissionRole">
+        select permission_id,role_id from sys_permission_role where permission_id=#{id}
+    </select>
+</mapper>
